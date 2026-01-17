@@ -1,0 +1,30 @@
+{
+  "name": "jab",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=apps/storefront",
+    "build": "npm run build --workspace=apps/storefront",
+    "start": "npm run start --workspace=apps/storefront",
+    "lint": "npm run lint --workspace=apps/storefront",
+    "type-check": "npm run type-check --workspace=apps/storefront",
+    "db:migrate": "npm run db:migrate --workspace=apps/storefront",
+    "db:generate": "npm run db:generate --workspace=apps/storefront",
+    "db:studio": "npm run db:studio --workspace=apps/storefront"
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.11"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@auth/drizzle-adapter": "^1.11.1",
+    "tsx": "^4.21.0"
+  }
+}
